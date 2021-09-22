@@ -16,22 +16,6 @@ class Chat {
         this.users.push(user);
     }
 
-    removeUser(userID){
-
-        let newUsers = [];
-        let oldUsers = this.getUsers();
-
-        for(let i = 0; i < oldUsers.length; i++){
-
-            if(oldUsers[i].id != userID) newUsers.push(oldUsers[i]);
-
-        }
-
-        this.users = newUsers;
-        return this.getUsers();
-
-    }
-
     sentMessage(message, from){
 
         this.messages.push(new Message(message, from));
