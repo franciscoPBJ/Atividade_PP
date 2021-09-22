@@ -38,3 +38,5 @@ chat.removeUser = function(userID){
     return chat.getUsers();
 
 };
+
+chat.removeUser('user3');
