@@ -1,6 +1,6 @@
 /*jshint esversion:6*/
 
-class ClassEvent {
+class Observer {
 
 	constructor(){
 
@@ -37,4 +37,4 @@ class ClassEvent {
 
 }
 
-exports = ClassEvent;
+exports = Observer;

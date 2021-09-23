@@ -7,25 +7,11 @@ class Chat extends Observer {
 
     constructor(id, users = [], messages = []){
 
+        super();
+
         this.id = id;
         this.users = users;
         this.messages = messages;
-
-    }
-
-    init(){
-
-        this.on('new-user', user=>{
-
-            console.log(`Novo usuário no chat: ${user.getName()}`);
-
-        });
-
-        this.on('new-message', ()=>{
-
-            this.renderMessages();
-
-        });
 
     }
 

@@ -11,7 +11,19 @@ let Luciana = new User('user5', 'Luciana', 23);
 let Fabiola = new User('user6', 'Fabíola', 23);
 
 let chat = new Chat('chat');
-chat.init();
+
+chat.on('new-user', user=>{
+
+    console.log(`Novo usuário no chat: ${user.getName()}`);
+
+});
+
+chat.on('new-message', ()=>{
+
+    chat.renderMessages();
+
+});
+
 chat.addUser(Alex);
 chat.addUser(Francisco);
 chat.addUser(Amabily);
